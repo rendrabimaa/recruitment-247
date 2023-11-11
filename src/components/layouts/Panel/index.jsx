@@ -22,15 +22,13 @@ const Panel = () => {
   }
 
   const handleSaveTab2 = () => {
-
-    console.log(randomNumbers)
     setActiveTab(3)
   }
   
   const generateRandomNumbers = () => {
     const randomNums = [];
-    const min = -10;
-    const max = 10;
+    const min = -100000;
+    const max = 100000;
     for(let i = 0; i < numberA; i++) {
       const random = Math.floor(Math.random() * (max - min + 1) ) + min;
       randomNums.push(random)
@@ -43,7 +41,6 @@ const Panel = () => {
     while(randomNumbers.includes(smallestNumber)){
       smallestNumber++;
     }
-    console.log(smallestNumber)
     setNumberB(smallestNumber);
   }
 
